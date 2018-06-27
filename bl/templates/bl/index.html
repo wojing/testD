@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BL Ablum</title>
+</head>
+<body>
+    <h3> BL Ablum</h3>
+    <div>
+    {% if ablum_list  %}
+        <ul>
+            {% for ablum in ablum_list %}
+                <li><a href="{{ ablum.id }}">{{ ablum.ablum_name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    </div>
+</body>
+</html>
