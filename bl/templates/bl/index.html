@@ -15,5 +15,20 @@
         </ul>
     {% endif %}
     </div>
+
+<div class="pagination">
+    {% if ablum_list.has_previous %}
+    <!-- 如果还有上一页 -->
+    <a href="?page={{ ablum_list.previous_page_number }}">上一页</a>
+    {% endif %}
+    <span class="current">
+        <!--当前页 -->
+        第{{ ablum_list.number }}页
+    </span>
+    {% if ablum_list.has_next %}
+    <!-- 还有下一页 -->
+    <a href="?page={{ ablum_list.next_page_number }}">下一页</a>
+    {% endif %}
+</div>
 </body>
 </html>
